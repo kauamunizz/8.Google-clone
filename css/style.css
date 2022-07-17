@@ -9,7 +9,7 @@ body {
     font-size: 14px;
     font-family: arial, sans-serif;
     color: #bdc1c6;
-    background: #202124;
+    background-color: rgb(53, 54, 58);
 }
 
 /* navbar */
@@ -33,7 +33,11 @@ body {
 .navbar .blocos .bloco-item a {
     text-decoration: none;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .navbar .blocos .bloco-item a:hover {
     text-decoration: underline;
@@ -42,10 +46,10 @@ body {
 
 
 .image-profile img{
-    height: 42px;
-    width: 42px;
+    height: 50px;
+    width: 50px;
     padding: 4px;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 
@@ -124,6 +128,48 @@ button {
     cursor: pointer;
 }
 
+/* dropdown */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+}
+
+#icons.active .dropdown-content{
+    display: flex;
+    background-color: #202124;
+    margin: 12px 0;
+    right: 90px;
+    width: 60vh;
+    height: 50vh
+}
+
+ #icons.active .dropdown-content ul .list-item {
+    font-size: 1.5em;
+    padding: 0 5px;
+    margin: 20px 10px;
+} 
+
+#icons.active .dropdown-content ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+#icons.active .dropdown-content ul li:hover {
+    background-color: rgb(53, 54, 58);
+}
+
+#icons.active .dropdown-content ul li i {
+    padding: 10px 0;
+}
+
+#icons.active .dropdown-content ul li a img {
+    margin-top: 3px 0;
+    padding: 0;
+}
+
 /* submit */
 
 .submits {
@@ -161,7 +207,7 @@ footer {
     width: 100%;
     display: flex;
     border-bottom: 1px solid #3c4043;
-    padding: 15px 30px;
+    padding: 11px 30px;
 }
 
 .pais p {
@@ -197,8 +243,30 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .navbar{
+        position: relative;
+    }
     .navbar .blocos .bloco-item {
-        padding: 0 10px;
+        padding: 0 7px;
+    }
+    .navbar .blocos .bloco-item a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #icons.active .dropdown-content {
+        width: 40vh;
+        height: 50vh;
+        left: 0;
+    }
+    .blocos .bloco-item .icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+    .list-item {
+        font-size: 1.2em;
+        padding: 0.7em;
     }
     .container {
         height: 60vh;
