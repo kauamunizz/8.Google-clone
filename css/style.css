@@ -36,6 +36,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 15px;
 }
 
 
@@ -104,7 +105,7 @@ body {
     font-size: 16px;
     color: #e8eaed;
 
-    outline: 0; /*demorei mas achei*/
+    outline: 0;
 }
 
 .bar-pesquisa .form {
@@ -142,13 +143,14 @@ button {
     margin: 12px 0;
     right: 90px;
     width: 60vh;
-    height: 50vh
+    height: 50vh;
+    padding: 20px 10px;
+    border-radius: 10px;
 }
 
- #icons.active .dropdown-content ul .list-item {
-    font-size: 1.5em;
+#icons.active .dropdown-content ul .list-item {
     padding: 0 5px;
-    margin: 20px 10px;
+    margin: 9px 6px;
 } 
 
 #icons.active .dropdown-content ul li {
@@ -156,19 +158,24 @@ button {
     display: inline-block;
 }
 
+#icons.active .dropdown-content ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 
 #icons.active .dropdown-content ul li:hover {
     background-color: rgb(53, 54, 58);
 }
 
+#icons.active .dropdown-content ul li a:hover {
+    text-decoration: none;
+}
+
+
 #icons.active .dropdown-content ul li i {
     padding: 10px 0;
 }
 
-#icons.active .dropdown-content ul li a img {
-    margin-top: 3px 0;
-    padding: 0;
-}
 
 /* submit */
 
@@ -258,6 +265,11 @@ footer {
         width: 40vh;
         height: 50vh;
         left: 0;
+        border-radius: 15px;
+    }
+    #icons.active .dropdown-content ul {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
     }
     .blocos .bloco-item .icon {
         position: absolute;
