@@ -304,6 +304,9 @@ footer {
         padding: 0 20px;
         height: 46px;
     }
+    .footer{
+        height: auto;
+    }
     .footer .footer-infos ul {
         display: block;
     }
