@@ -1,20 +1,34 @@
+'stric mode';
 
-function pesquisar () {
-    const busca = document.getElementById('pesquisa');
-    const valor = busca.value
+const index = (() => {
+    function pesquisar () {
+        const { campo } = document.forms.busca;
+        
+        location.href = 'https://www.google.com.br/search?q=' + campo.value;
+    }
+
+    function events() {
+        document.forms.busca.addEventListener('submit', event => {
+            event.preventDefault();
+        
+            pesquisar();
+        });
+
+        document.querySelectorAll('.submit').forEach(element => {
+            element.addEventListener('click', pesquisar);
+        });
     
-    console.log('https://www.google.com.br/search?q=' + valor);
+        document.getElementById('dropButton').addEventListener('click', () => {
+            const icons = document.getElementById('icons');
+            icons.classList.toggle('active');
+        });
+    }
 
-    window.location.href = 'https://www.google.com.br/search?q=' + valor;
-}
+    function init() {
+        events();
+    }
 
-// dropdown
+    return { init };
+})();
 
-const dropButton = document.getElementById('dropButton');
-
-function toggleMenu () {
-    const icons = document.getElementById('icons');
-    icons.classList.toggle('active')
-}
-
-dropButton.addEventListener('click', toggleMenu)
+index.init();
