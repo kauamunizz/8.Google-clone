@@ -164,6 +164,8 @@ button {
 
 #icons.active .dropdown-content ul li:hover {
     background-color: rgb(53, 54, 58);
+    border: 1px solid #5f6368;
+    border-radius: 4px;
 }
 
 #icons.active .dropdown-content ul li a:hover {
@@ -185,19 +187,32 @@ button {
 
 .submits .submit-item {
     padding: 0 8px;
+    margin-left: 10px;
 }
 
-.submit-item input[type=button] {
+.submit-item {
+    display: flex;
     background-color: #303134;
     border: 1px solid #303134;
-    border-radius: 4px;
-    color: #e8eaed;
-    padding: 0 16px;
+    border-radius: 5px;
     height: 36px;
     min-width: 54px;
 }
 
-.submit-item input[type=button]:hover {
+
+.submit-item .submit {
+    color: #e8eaed;
+    padding: 0 16px;
+}
+
+
+.submit-item a {
+    text-decoration: none;
+    margin: auto;
+}
+
+
+.submit-item:hover {
     border: 1px solid #5f6368;
 }
 
