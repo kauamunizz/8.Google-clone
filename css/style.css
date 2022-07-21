@@ -276,6 +276,7 @@ footer {
     }
     #icons.active .dropdown-content {
         width: fit-content;
+        height: 50vh;
         left: 0;
         border-radius: 15px;
     }
