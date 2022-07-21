@@ -141,8 +141,6 @@ button {
     background-color: #202124;
     margin: 12px 0;
     right: 90px;
-    width: 60vh;
-    height: 50vh;
     padding: 20px 10px;
     border-radius: 10px;
 }
@@ -277,8 +275,7 @@ footer {
         align-items: center;
     }
     #icons.active .dropdown-content {
-        width: 40vh;
-        height: 50vh;
+        width: fit-content;
         left: 0;
         border-radius: 15px;
     }
